@@ -1,5 +1,25 @@
 import { useState } from 'react'
 
+
+const Statistics = ({good, neutral, bad, all, average, positive}) => {
+
+  return (
+
+    <div>
+      <h1>statistics</h1>
+      <p>good {good}</p>
+      <p>neutral {neutral}</p>
+      <p>bad {bad}</p>
+      <p>all {all}</p>
+      <p>average {average}</p>
+      <p>positive {positive} %</p> 
+    </div>
+    
+  )
+
+}
+
+
 const App = () => {
 
 
@@ -19,45 +39,30 @@ const App = () => {
   }
 
   const all = good + bad + neutral
-  const positive = all > 0 ? ((good / all) * 100).toFixed(13) : 0
-  const average = all > 0 ? ((good - bad)/all).toFixed(15) : 0
-
+  const positive = all > 0 ? ((good / all) * 100).toFixed(10) : 0
+  const average = all > 0 ? ((good - bad)/all).toFixed(13) : 0
   
 
-  
+
  
   return (
     <div>
+      
       <h1>give feedback</h1>
       <button onClick={click_good}>good</button>
       <button onClick={click_neutral}>neutral</button>
       <button onClick={click_bad}>bad</button>
-      <h1>statistics</h1>
-      <div>
-        <a>good {good}</a>
-      </div>
-      <div>
-        <a>neutral {neutral}</a>
-      </div> 
-      <div>
-        <a>bad {bad}</a>
-      </div>
-      <div>
-        <a>all {all}</a>
-      </div> 
-      <div>
-        <a>average {average} </a>
-      </div> 
-      <div>
-        <a>positive {positive} %</a>
-      </div>    
-
-
+      <Statistics 
+        good={good} 
+        neutral={neutral} 
+        bad={bad} 
+        all={all} 
+        average={average}
+        positive={positive}
+       />
     </div>
   )
 }
-
-
 
 
 export default App
