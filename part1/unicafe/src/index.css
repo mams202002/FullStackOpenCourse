@@ -80,3 +80,13 @@ p {
   font-size: 1.6em; 
   margin: -3px;
 }
+
+table {
+  font-weight: 500;
+  color: black;
+  
+  font-family: times;
+  font-size: 1.6em; 
+  margin: 3px;
+
+}
