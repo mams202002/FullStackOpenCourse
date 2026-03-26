@@ -4,7 +4,7 @@ This repository contains my solutions to the **Full Stack Open** course. This co
 
 ## 📂 Progress 
 - [x] **Part 0:** Fundamentals of Web apps
-- [ ] **Part 1:** Introduction to React (Course info, Unicafe, Anecdotes)
+- [x] **Part 1:** Introduction to React (Course info, Unicafe, Anecdotes)
 - [ ] **Part 2:** Communicating with server
 - [ ] **Part 3:** Programming a server with NodeJS and Express
 
